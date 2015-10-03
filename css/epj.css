@@ -1,0 +1,85 @@
+html
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #666;
+    font-family: sans-serif;
+}
+.contain
+{
+    padding-top: 20px;
+    width: 1400px;
+    margin-left:30px;
+}
+h1
+{
+    font-size: 1em;
+}
+a {
+    color: #cc0000;
+}
+a:hover {
+    text-decoration: none;
+}
+.teenytiny {
+	font-size: 9px;
+	margin-left:30%;
+}
+#text-shadow-box {
+    position: relative;
+    width: 1000px;
+    height: 406px;
+    background: #666;
+    overflow: hidden;
+    cursor: none;
+    /* border: 1px solid #333; */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-user-select: none;
+}
+#text-shadow-box div.wall {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    width: 100%;
+}
+#tsb-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: #999;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 0.5em;
+    height: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+div.wall div {
+    position: absolute;
+    background: #999;
+    top: 42px;
+    left: 0;
+    height: 300px;
+    width: 100%;
+}
+#tsb-box {
+    left: -100px;
+    width: 1700px;
+}
+#tsb-spot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url(spotlight.png) center center;
+    background: -moz-radial-gradient(center 45deg, circle closest-side, transparent 0%, black 60%);
+    background: -webkit-gradient(radial, center center, 0, center center, 250, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+}
