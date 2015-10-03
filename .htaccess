@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+   RewriteBase /
+   RewriteEngine on
+   RewriteCond %{HTTP_HOST} !^www\.
+   RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
