@@ -22,7 +22,7 @@
 		<p class="birdman">EmergencyPuffJacket is my design portfolio site, and also a place to try several web experiments.</p>
 		<p class="birdman">It was created in 1999.</p>
 		<p class="birdman">A lot has changed on the web since then.</p>
-		<p>Stay tuned for new experiments.</p>
+		<p class="birdman">Stay tuned for more experiments.</p>
 		</main>
 	</div>
 	<footer role="contentinfo">
