@@ -1,68 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="initial-scale=0.5" />
-<title>E m e r g e n c y P u f f J a c k e t . c o m</title>
-<link rel="stylesheet" type="text/css" href="css/epj.css" />
-<style type="text/css" media="all">
-</style>
+	<meta charset="utf-8">
+	<title>> > > > EmergencyPuffJacket.com > > > ></title>
+	<meta name="description" content="EmergencyPuffJacket - doing weird web things since 1999">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="lib/normalize.css" rel="stylesheet" media="all">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="birdman.js"></script>
 </head>
 <body>
-<div class="contain">
-<div id="text-shadow-box">
-<div class="wall">
-    <div id="tsb-box"></div>
-    <p id="tsb-text">EmergencyPuffJacket.com</p>
-    <div></div>
-</div>
-<div id="tsb-spot"></div>
-</div>
-
-<script type="text/javascript" language="javascript" charset="utf-8">
-/**
- * Zachary Johnson
- * June 2009
- * www.zachstronaut.com
- */
-var text = null;
-var spot = null;
-var box = null;
-var boxProperty = '';
-///window.onload = init;
-init();
-function init() {
-    text = document.getElementById('tsb-text');
-    spot = document.getElementById('tsb-spot');
-    box = document.getElementById('tsb-box');
-    if (typeof box.style.webkitBoxShadow == 'string') {
-        boxProperty = 'webkitBoxShadow';
-    } else if (typeof box.style.MozBoxShadow == 'string') {
-        boxProperty = 'MozBoxShadow';
-    } else if (typeof box.style.boxShadow == 'string')
-    {
-        boxProperty = 'boxShadow';
-    }
-    if (text && spot && box) {
-        document.getElementById('text-shadow-box').onmousemove = onMouseMove;
-        document.getElementById('text-shadow-box').ontouchmove = function (e) {e.preventDefault(); e.stopPropagation(); onMouseMove({clientX: e.touches[0].clientX, clientY: e.touches[0].clientY});};
-    }
-    onMouseMove({clientX: 300, clientY: 200});
-}
-function onMouseMove(e) {
-    var xm = e.clientX - 300;
-    var ym = e.clientY - 175;
-    var d = Math.round(Math.sqrt(xm*xm + ym*ym) / 5);
-    text.style.textShadow = -xm + 'px ' + -ym + 'px ' + (d + 10) + 'px black';
-    if (boxProperty) {
-        box.style[boxProperty] = '0 ' + -ym + 'px ' + (d + 30) + 'px black';
-    }
-    xm = e.clientX - 600;
-    ym = e.clientY - 450;
-    spot.style.backgroundPosition = xm + 'px ' + ym + 'px';
-}
-</script>
-<p class="teenytiny">Shadow effects created by zachary johnson at <a href="http://www.zachstronaut.com/">zachstronaut</a></p>
+	<header role="banner">
+		<h1>EmergencyPuffJacket.com</h1>
+	</header>
+	<div class="wrap">
+		<!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
+		<main> element until user agents implement the required role mapping. -->
+		<main role="main">
+		<p class="birdman">EmergencyPuffJacket is my design portfolio site, and also a place to try several web experiments.</p>
+		<p class="birdman">It was created in 1999.</p>
+		<p class="birdman">A lot has changed on the web since then.</p>
+		<p>Stay tuned for new experiments.</p>
+		</main>
+	</div>
+	<footer role="contentinfo">
+		<small>This site uses the Birdman plugin, created by <a href="https://github.com/chrisma/birdman.js" target="_blank">Christoph Matthies</a></small>
+	</footer>
+	<script type="text/javascript">
+		$('.birdman').birdman({speedUp:false});
+	</script>
 </body>
 </html>
