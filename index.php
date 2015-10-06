@@ -8,12 +8,13 @@
 	<link href="lib/normalize.css" rel="stylesheet" media="all">
 	<link href="styles.css" rel="stylesheet" media="all">
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="birdman.js"></script>
 </head>
 <body>
 	<header role="banner">
-		<h1>EmergencyPuffJacket.com</h1>
+		<h1 class="Droid-Sans-Normal-100">EmergencyPuffJacket.com</h1>
 	</header>
 	<div class="wrap">
 		<!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
