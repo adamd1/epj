@@ -17,17 +17,15 @@
 		<h1 class="Droid-Sans-Normal-100">EmergencyPuffJacket.com</h1>
 	</header>
 	<div class="wrap">
-		<!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
-		<main> element until user agents implement the required role mapping. -->
 		<main role="main">
-		<p class="birdman">EmergencyPuffJacket is my design portfolio site, and also a place to try several web experiments.</p>
+		<p class="birdman">EmergencyPuffJacket is the portfolio site of Adam Drake, and also a place where he tries a few web experiments.</p>
 		<p class="birdman">It was created in 1999.</p>
-		<p class="birdman">A lot has changed on the web since then.</p>
 		<p class="birdman">Stay tuned for more experiments.</p>
 		</main>
 	</div>
 	<footer role="contentinfo">
-		<small>This site uses the Birdman plugin, created by <a href="https://github.com/chrisma/birdman.js" target="_blank">Christoph Matthies</a></small>
+		<p>small>This site uses the Birdman plugin, created by <a href="https://github.com/chrisma/birdman.js" target="_blank">Christoph Matthies</a></small><br />
+		Visit Adam's main website <a href="http://brainrub.com/adamd/">here</a>.</p>
 	</footer>
 	<script type="text/javascript">
 		$('.birdman').birdman({speedUp:false});
