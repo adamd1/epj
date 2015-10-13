@@ -19,10 +19,6 @@
 */
 ini_set('display_errors', 1); 
 error_reporting(E_ALL);
-
-
-Host: 
-DB instance identifier:
 define ("g_dbhost","epjdb1.cwkm0e8ntibe.us-west-2.rds.amazonaws.com");
 define ("g_dbusr","adamdbio");
 define ("g_dbpass","C9PC6Jj25q4m288qx");
