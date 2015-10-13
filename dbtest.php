@@ -23,6 +23,7 @@ define ("g_dbhost","epjdb1.cwkm0e8ntibe.us-west-2.rds.amazonaws.com");
 define ("g_dbusr","adamdbio");
 define ("g_dbpass","C9PC6Jj25q4m288qx");
 define ("g_dbname","ad_bios");
+date_default_timezone_set('America/New_York');
 $yearout = date ("Y");
 $todaydate = date ("D, M jS Y");
 $todaydateraw = date("Y-m-d");
@@ -32,7 +33,6 @@ $debugout="<hr noshade size=\"1\">\n<p><i><b>Debug Output</b></i></p>\n";
 $error=0;
 $errorout="";
 $sql="select distinct testid, post_date, title, message from test_table order by testid desc;";
-$db = new PDO('mysql:host='.g_dbhost.';dbname='.g_dbname.';charset=utf8', g_dbusr, g_dbpass);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	try {
