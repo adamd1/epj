@@ -3,12 +3,12 @@
 ========================================================
 
    10/13/2015 03:25:21 PM
-   [Project Name]
-   [Page Description]
+   [EPJ]
+   [Database test page]
    Adam D.
-   Corus Entertainment
-   adam.drake@corusent.com
-   www.corusent.com
+   Brainrub
+   adam@brainrub.com
+   www.brainrub.com
 
    --
 
@@ -33,6 +33,7 @@ $debugout="<hr noshade size=\"1\">\n<p><i><b>Debug Output</b></i></p>\n";
 $error=0;
 $errorout="";
 $sql="select distinct testid, post_date, title, message from test_table order by testid desc;";
+$db = new PDO('mysql:host='.g_dbhost.';dbname='.g_dbname.';charset=utf8', g_dbusr, g_dbpass);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	try {
@@ -73,6 +74,7 @@ $db=null;
    .caption {font-family:verdana;font-size:11px;color:#777;}
    .ind {text-indent:1.8em;}
    #clearit {clear:both;}
+   #wrapper { margin 0 auto; margin-left:40px; margin-top: 30px;}
    -->
    </style>
 <title>EPJ Database Test</title>
