@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>> > > > EmergencyPuffJacket.com > > > ></title>
-	<meta name="description" content="EmergencyPuffJacket - doing weird web things since 1999">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery-2.1.0.js"></script>
-  <link rel="stylesheet" href="css/xmasstyle.css"></link>
-</head>
-	<body class="xmasBg">
-	<script src='js/snowfall.jquery.min.js'></script>
-	<div class="banner">EmergencyPuffJacket.com</div>
-		<script type='text/javascript'>  
-			$(document).ready(function(){
-				$(document).snowfall();
-			});
-		</script>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>> > > > EmergencyPuffJacket.com > > > ></title>
+		<link rel="stylesheet" href="css/reset.css">
+		<style>
+		body {
+			overflow: hidden;
+			background: #111;
+		}
+		</style>
+		<script src="js/prefixfree.min.js"></script>
+	</head>
+	<body>
+		<canvas></canvas>
+		<script src='js/zepto/zepto.min.js'></script>
+		<script src='js/other/Stats.js'></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
