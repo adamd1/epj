@@ -1,0 +1,103 @@
+/* Adam's Bio styles. */
+@page Body1
+  {
+   size: 8.5in 11.0in;
+   margin: 1.0in 1.25in 1.0in 1.25in;
+   mso-header-margin: 0.5in;
+   mso-footer-margin: 0.5in;
+   mso-paper-source: 0;
+  }
+body
+  {
+   background: url(/images/bgstuff3.gif) rgb(0,0,0);
+   border-left: 0px;
+   border-top: 0px;
+   font: 11px Verdana,arial,sans serif;
+   color: #eeeeee;
+   scrollbar-face-color: #320808;
+   scrollbar-highlight-color: #320808;
+   scrollbar-shadow-color: #dd3300;
+   scrollbar-3dlight-color: #dd3300;
+   scrollbar-arrow-color: #ef750e;
+   scrollbar-track-color: #240000;
+   scrollbar-darkshadow-color: #000000
+  }
+a:link
+  {
+   color: #bbbbbb;
+   text-decoration: none;
+  }
+a:visited
+  {
+   color: #ff0000;
+   text-decoration: none;
+  }
+a:active
+  {
+   color: #ff0000;
+   text-decoration: none;
+  }
+.blurb
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   font-size: 11px;
+   color: #ffffff;
+   line-height: 13px;
+  }
+.title
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   font-size: 14px;
+   color: #ffffff;
+   font-weight: bold;
+   line-height: 16px;
+  }
+.copyright
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   font-size: 10px;
+   margin-top: 0in;
+   margin-bottom: .0in;
+   line-height: 12px;
+   text-align: Center;
+   font-style: Italic;
+  }
+.copy
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   text-decoration: none;
+   font-size: 12px;
+   line-height: 14px;
+   color: #000000;
+  }
+.titlesmall
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   text-decoration: none;
+   font-size: 10px;
+   line-height: 12px;
+   color: #003333;
+  }
+.tiny
+  {
+   font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+   text-decoration: none;
+   font-size: 9px;
+   line-height: 11px;
+   color: #000000;
+  }
+input,select,textarea
+  {
+   border: 1px red solid;
+   font-family: verdana, arial, helvetica;
+   font-size: 9px;
+   color: rgb(80,80,80);
+   background-color: rgb(200,200,200);
+  }
+input.textfield
+  {
+   background-color: rgb(200,200,200);
+   font-family: verdana, arial, helvetica;
+   font-size: 9px;
+   color: rgb(80,80,80);
+  }
