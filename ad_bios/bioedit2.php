@@ -1,14 +1,21 @@
 <?php
 /*
-   bioedit2.epj
+   bioedit2.php
    Post bio edits to the db.
    Coded Jan. 2nd, 2002.
    (c) 2002 Adam Drake
    adam@brainrub.com
 */
-// All the basics
-   include("elements/basics.epj");
+// require_once __DIR__."/lib/KLogger.php";  // Include KLogger first so config sets log dir
+// Database connection object (Which auto-loads all the site configuration.)
+require_once __DIR__ . "/data/DBConnector.php";
    $css="bio.css";
+$p_bio_id=$_REQUEST["p_bio_id"];
+$p_date=$_REQUEST["p_date"];
+$p_bio_type=$_REQUEST["p_bio_type"];
+$p_blab=$_REQUEST["p_blab"];
+$p_bioyr=$_REQUEST["p_bioyr"];
+
    if ($p_bio_id != '' && $p_bio_id != null
        && $p_date != '' && $p_date != null
        && $p_bio_type != '' && $p_bio_type != null
@@ -21,19 +28,25 @@
             $p_show="y";
          }
       $bio_query="UPDATE my_bio SET
-                 section = '$p_bio_type',
-                 date_entered = '$p_date',
-                 showme = '$p_show',
-                 blab = '$out'
-                 WHERE (bio_id = $p_bio_id);";
+                 section = '".$p_bio_type."',
+                 date_entered = '".$p_date."',
+                 showme = '".$p_show."',
+                 blab = '".$out."'
+                 WHERE (bio_id = ".$p_bio_id.");";
 // connect to the database
-      $db = mysql_connect(g_dbhost, g_dbusr, g_dbpass);
-// choose the correct database
-      mysql_select_db(g_dbname,$db);
-//   print($bio_query);
-      $bio_result = mysql_query($bio_query,$db);
-      mysql_close($db);
-      header("Location: ".$basepath."ad_bios/bio.epj?p_yr=".$p_bioyr."\n\n");
+      $db = dbconnector::connect();
+      $stmt="";
+      $stmt = $db->prepare($sql);
+		try{
+			// Execute
+			$retVal = $stmt -> execute();
+			$newid=$db->lastInsertId();
+      header("Location: ".$basepath."ad_bios/bio.php?p_yr=".$p_bioyr."\n\n");
+		} catch (PDOException $ex) {
+			// $this->_log->logError(__METHOD__.': Exception '.$ex->getMessage());
+			print($ex->getMessage());
+		}
+   $stmt=null;
    } else {
 // Unsuccessful
       print("Doofus: All fields are required.");
