@@ -9,7 +9,7 @@
    Lots of code fixes. More streamlined db access...
 */
 
-require_once __DIR__."/lib/KLogger.php";  // Include KLogger first so config sets log dir
+// require_once __DIR__."/lib/KLogger.php";  // Include KLogger first so config sets log dir
 // Database connection object (Which auto-loads all the site configuration.)
 require_once __DIR__."/data/DBConnector.php";
 $css="bio.css";
