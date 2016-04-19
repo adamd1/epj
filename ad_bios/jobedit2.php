@@ -26,19 +26,19 @@ require_once __DIR__ . "/data/DBConnector.php";
        && $p_cntry != '' && $p_cntry != null) {
 // Successful
       $job_query="UPDATE my_jobs SET
-                  from_date = '$p_frmdate',
-                  to_date = '$p_todate',
-                  jobtitle = '$p_jobttl',
-                  company = '$p_comp',
-                  comp_type = '$p_comptype',
-                  street = '$p_street',
-                  city = '$p_city',
-                  stprv = '$p_stprv',
-                  country = '$p_cntry',
-                  postcode = '$p_code',
-                  notes = '$p_notes',
-                  co_workers = '$p_cowork'
-                  WHERE (job_id = $p_jobid);";
+                  from_date = '".$p_frmdate."',
+                  to_date = '".$p_todate."',
+                  jobtitle = '".$p_jobttl."',
+                  company = '".$p_comp."',
+                  comp_type = '".$p_comptype."',
+                  street = '".$p_street."',
+                  city = '".$p_city."',
+                  stprv = '".$p_stprv."',
+                  country = '".$p_cntry."',
+                  postcode = '".$p_code."',
+                  notes = '".$p_notes."',
+                  co_workers = '".$p_cowork."'
+                  WHERE (job_id = ".$p_jobid.");";
 	// connect to the database
 	$db = dbconnector::connect();
 	$stmt="";
@@ -54,7 +54,7 @@ require_once __DIR__ . "/data/DBConnector.php";
 			print($ex->getMessage());
 		}
 			if($success==1){
-	      header("Location: ".$basepath."ad_bios/jobs.php?p_jobid=".$p_jobid."\n\n");
+	      header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
 	    } else {
 				// Unsuccessful
 	      print("Doofus: Empty fields!!");
