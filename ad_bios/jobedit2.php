@@ -35,7 +35,7 @@ require_once __DIR__ . "/data/DBConnector.php";
                   company = '".mysql_real_escape_string($p_comp)."',
                   comp_type = '".mysql_real_escape_string($p_comptype)."',
                   street = '".mysql_real_escape_string($p_street)."',
-                  city = '".mysql_real_escape_string($p_city.)"',
+                  city = '".mysql_real_escape_string($p_city)."',
                   stprv = '".$p_stprv."',
                   country = '".$p_cntry."',
                   postcode = '".$p_code."',
