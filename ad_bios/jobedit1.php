@@ -27,7 +27,7 @@ require_once __DIR__ . "/data/DBConnector.php";
 $db = dbconnector::connect();
 //   print($job_query);
 // Prepare
-$stmt = $db->prepare($sql);
+$stmt = $db->prepare($job_query);
 // Execute
 $retVal = $stmt -> execute();
 // Row count...
