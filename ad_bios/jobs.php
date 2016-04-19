@@ -56,7 +56,8 @@ $db = dbconnector::connect();
 					print("s");
 					}
 					print(" to date.<br /><br />\n\n</div>");
-					print("<table border=\"0\">\n");
+					print("<table border=\"0\" width=\"465\" cellpadding=\"5\" ");
+					print("cellspacing=\"0\" bgcolor=\"#333333\" class=\"blurb\">\n");
 					foreach($rows as $row) {
 						print("  <tr>\n");
 						print("   <td width=\"250\" align=\"left\" valign=\"top\">\n");
