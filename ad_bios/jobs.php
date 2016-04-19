@@ -51,7 +51,7 @@ $db = dbconnector::connect();
 			$stmt = null;
 			$ctr=0;
 				if($row_count>0){
-					$j/f("<div align=\"center\">I have held <b>%s</b> occupation",$jobs_count);
+					printf("<div align=\"center\">I have held <b>%s</b> occupation",$jobs_count);
 					if($jobs_count>1) {
 					print("s");
 					}
@@ -59,8 +59,7 @@ $db = dbconnector::connect();
 					foreach($rows as $row) {
 						print("  <tr>\n");
 						print("   <td width=\"250\" align=\"left\" valign=\"top\">\n");
-						printf("   &#187;<a href=\"jobs.php?p_jobid=%s\">",$row["job_id"]);
-						printf("%s</a>",$row["company"]);
+						printf("   &#187;<a href=\"jobs.php?p_jobid=%s\">%s</a>",$row["job_id"],$row["company"]);
 						printf(" %s, %s\n",$row["city"],$row["stprv"]);
 						print("   </td>\n");
 						print("   <td width=\"250\" align=\"right\" valign=\"top\">\n");
