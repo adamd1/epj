@@ -31,7 +31,7 @@ $db = dbconnector::connect();
   </tr>
 </table><br /><br />
 <?php
-   if(!$p_jobid){
+   if($p_jobid==""){
 			$sql="select all job_id,from_date,to_date,jobtitle,
 			company,city,stprv,
 			DATE_FORMAT(from_date, '%b. %Y') AS fmtfromdt,
