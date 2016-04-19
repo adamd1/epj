@@ -1,6 +1,6 @@
 <?php
 /*
-   jobedit2.epj
+   jobedit2.php
    Post job entry edits to the db.
    Coded Jan. 18th, 2002.
    (c) 2002 Adam Drake
@@ -54,7 +54,7 @@ require_once __DIR__ . "/data/DBConnector.php";
 			print($ex->getMessage());
 		}
 			if($success==1){
-	      header("Location: ".$basepath."ad_bios/jobs.epj?p_jobid=".$p_jobid."\n\n");
+	      header("Location: ".$basepath."ad_bios/jobs.php?p_jobid=".$p_jobid."\n\n");
 	    } else {
 				// Unsuccessful
 	      print("Doofus: Empty fields!!");
