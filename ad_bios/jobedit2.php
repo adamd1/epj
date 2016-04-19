@@ -42,7 +42,7 @@ require_once __DIR__ . "/data/DBConnector.php";
 	// connect to the database
 	$db = dbconnector::connect();
 	$stmt="";
-	$stmt = $db->prepare($sql);
+	$stmt = $db->prepare($job_query);
 	$success=0;
 	
 		try{
