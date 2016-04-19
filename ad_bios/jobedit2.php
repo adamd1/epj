@@ -6,10 +6,18 @@
    (c) 2002 Adam Drake
    adam@brainrub.com
 */
-// All the basics
-   include("elements/basics.epj");
+// require_once __DIR__."/lib/KLogger.php";  // Include KLogger first so config sets log dir
+// Database connection object (Which auto-loads all the site configuration.)
+require_once __DIR__ . "/data/DBConnector.php";
    $css="bio.css";
-   IF ($p_jobid != '' && $p_jobid != null
+   $p_jobid=$_REQUEST["p_jobid"];
+   $p_frmdate=$_REQUEST["p_frmdate"];
+   $p_jobttl=$_REQUEST["p_jobttl"];
+   $p_comp=$_REQUEST["p_comp"];
+   $p_city=$_REQUEST["p_city"];
+   $p_stprv=$_REQUEST["p_stprv"];
+   $p_cntry=$_REQUEST["p_cntry"];
+   if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
        && $p_comp != '' && $p_comp != null
@@ -31,17 +39,28 @@
                   notes = '$p_notes',
                   co_workers = '$p_cowork'
                   WHERE (job_id = $p_jobid);";
-// connect to the database
-      $db = mysql_connect(g_dbhost, g_dbusr, g_dbpass);
-// choose the correct database
-      mysql_select_db(g_dbname,$db);
-//   print($job_query);
-      $job_result = mysql_query($job_query,$db);
-      mysql_close($db);
-      header("Location: ".$basepath."ad_bios/jobs.epj?p_jobid=".$p_jobid."\n\n");
-   } ELSE {
+	// connect to the database
+	$db = dbconnector::connect();
+	$stmt="";
+	$stmt = $db->prepare($sql);
+	$success=0;
+	
+		try{
+			// Execute
+			$retVal = $stmt -> execute();
+			$success=1;
+		} catch (PDOException $ex) {
+			// $this->_log->logError(__METHOD__.': Exception '.$ex->getMessage());
+			print($ex->getMessage());
+		}
+			if($success==1){
+	      header("Location: ".$basepath."ad_bios/jobs.epj?p_jobid=".$p_jobid."\n\n");
+	    } else {
+				// Unsuccessful
+	      print("Doofus: Empty fields!!");
+			}
+   } else {
 // Unsuccessful
       print("Doofus: All fields are required.");
    }
-//   mysql_free_result($job_result);
 ?>
