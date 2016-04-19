@@ -51,11 +51,12 @@ $db = dbconnector::connect();
 			$stmt = null;
 			$ctr=0;
 				if($row_count>0){
-					printf("<div align=\"center\">I have held <b>%s</b> occupation",$jobs_count);
-					if($jobs_count>1) {
+					printf("<div align=\"center\">I have held <b>%s</b> occupation",$row_count);
+					if($row_count>1) {
 					print("s");
 					}
 					print(" to date.<br /><br />\n\n</div>");
+					print("<table border=\"0\">\n");
 					foreach($rows as $row) {
 						print("  <tr>\n");
 						print("   <td width=\"250\" align=\"left\" valign=\"top\">\n");
