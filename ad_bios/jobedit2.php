@@ -32,15 +32,15 @@ require_once __DIR__ . "/data/DBConnector.php";
                   from_date = '".$p_frmdate."',
                   to_date = '".$p_todate."',
                   jobtitle = '".$p_jobttl."',
-                  company = '".$p_comp."',
-                  comp_type = '".$p_comptype."',
-                  street = '".$p_street."',
-                  city = '".$p_city."',
+                  company = '".mysql_real_escape_string($p_comp)."',
+                  comp_type = '".mysql_real_escape_string($p_comptype)."',
+                  street = '".mysql_real_escape_string($p_street)."',
+                  city = '".mysql_real_escape_string($p_city.)"',
                   stprv = '".$p_stprv."',
                   country = '".$p_cntry."',
                   postcode = '".$p_code."',
-                  notes = '".$p_notes."',
-                  co_workers = '".$p_cowork."'
+                  notes = '".mysql_real_escape_string($p_notes)."',
+                  co_workers = '".mysql_real_escape_string($p_cowork)."'
                   WHERE (job_id = ".$p_jobid.");";
 	// connect to the database
 	$db = dbconnector::connect();
