@@ -17,6 +17,9 @@ require_once __DIR__ . "/data/DBConnector.php";
    $p_city=$_REQUEST["p_city"];
    $p_stprv=$_REQUEST["p_stprv"];
    $p_cntry=$_REQUEST["p_cntry"];
+   $p_code=$_REQUEST["p_code"];
+   $p_notes=$_REQUEST["p_notes"];
+   $p_cowork=$_REQUEST["p_cowork"];
    if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
@@ -54,9 +57,7 @@ require_once __DIR__ . "/data/DBConnector.php";
 			print($ex->getMessage());
 		}
 			if($success==1){
-	      // header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
-	      print($job_query);
-	      
+	      header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
 	    } else {
 				// Unsuccessful
 	      print("Doofus: Empty fields!!");
