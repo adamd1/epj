@@ -54,7 +54,9 @@ require_once __DIR__ . "/data/DBConnector.php";
 			print($ex->getMessage());
 		}
 			if($success==1){
-	      header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
+	      // header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
+	      print($job_query);
+	      
 	    } else {
 				// Unsuccessful
 	      print("Doofus: Empty fields!!");
