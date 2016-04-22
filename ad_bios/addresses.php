@@ -39,12 +39,7 @@ $p_addid="";
    if($p_addid==""){
 			print("<table border=\"0\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#333333\">\n");
 			print("     <tr>\n");
-			print("      <td width=\"520\" align=\"Left\" valign=\"Top\" class=\"blurb\">\n");
-			print("      For those who care, those who don't, and - well - those who have\n");
-			print("      just been having a hard time tracking me down over the years:\n");
-			print("      Here's the complete list of addresses I've lived at in my\n");
-			print("      life.\n");
-			print("      </td>\n");
+			print("      <td width=\"520\" align=\"left\" valign=\"top\" class=\"blurb\">For those who care, those who don't, and - well - those who have just been having a hard time tracking me down over the years: Here's the complete list of addresses I've lived at in my life.</td>\n");
 			print("     </tr>\n");
 			print("   </table><br />\n\n");
 			$sql = "SELECT add_id,from_date,to_date,street,city,
