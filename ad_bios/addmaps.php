@@ -28,7 +28,7 @@ $p_addid="";
 $db = dbconnector::connect();
 // Now: Run the query for the graph.
 // Prepare
-$stmt = $db->prepare($sql);
+$stmt = $db->prepare($add_query);
 // Execute
 $retVal = $stmt -> execute();
 // Row count...
