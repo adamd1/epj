@@ -41,8 +41,7 @@ $nocopy="";
       }
    printf("   <title>%s</title>\n",$pagetitle);
       if ($js){
-         print("   <script language=\"JavaScript\" type=\"text/javascript\" ");
-         printf("src=\"%s\"></script>\n",$js);
+         printf("   <script type=\"text/javascript\" src=\"%s\"></script>\n",$js);
       }
    print("</head>\n\n");
 ?>
