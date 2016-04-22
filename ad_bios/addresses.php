@@ -128,6 +128,9 @@ $p_addid="";
                   printf("   %s<br />\n",$row["country"]);
                   printf("   %s<br />\n",$row["postcode"]);
                   printf("   %s",$row["phone"]);
+// Google Maps...
+                  $mapaddress=urlencode($row["street"]." ".$row["city"].", ".$row["stprv"]." ".$row["country"]." ".$row["postcode"]);
+                  print("<br>\n&#149;&nbsp;<a href=\"https://www.google.ca/maps/search/".$mapaddress."\">Google Map</a>");
 // Map image...
                      if($row["map_url"]<>""){
                         print("<br>\n&#149;&nbsp;<a href=\"javascript:openCustomWin('".$row["map_url"]."','370','260','40','200','bioMap','0');\">View Map</a>");
