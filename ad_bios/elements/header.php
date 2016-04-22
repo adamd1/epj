@@ -9,7 +9,7 @@
                  June - July, 2000
 */
 $avgo="";
-$js="";
+$js="adbios.js";
 $nocopy="";
 	if(isset($_GET["avgo"]) && $_GET["avgo"]!=""){
 		$avgo=$_GET["avgo"];
