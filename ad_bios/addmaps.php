@@ -41,20 +41,21 @@ $ctr=0;
 // Process...
 	if($row_count>0){
 		foreach($rows as $row) {
-		$addr_output=str_replace("<br />", " - ", $row["street"]).", ";
-		$addr_output.=$row["city"].", ".$row["stprv"].", ".$row["country"];
-		// No css this time...
-		$css='music.css';
-		$pagetitle=str_replace("<br />", " - ", $row["street"]).", ".$row["city"];
-		// default html header with comments
-		include("elements/header.php");
-		print("<body>\n");
-		print("<div style=\"position:absolute;top:0px;left:0px;\" align=\"center\">\n");
-		print("<a href=\"javascript:self.close();\">");
-		printf("<img src=\"%s\" width=\"356\" height=\"249\" border=\"0\" alt=\"%s\"></a>",$row["map_url"],$addr_output);
-		// print("<br />\n<a href=\"javascript:self.close();\">close window</a><br />\n");
-		print("</div>\n");
-		print("</body>\n");
-		print("</html>\n");
+			$addr_output=str_replace("<br />", " - ", $row["street"]).", ";
+			$addr_output.=$row["city"].", ".$row["stprv"].", ".$row["country"];
+			// No css this time...
+			$css='music.css';
+			$pagetitle=str_replace("<br />", " - ", $row["street"]).", ".$row["city"];
+			// default html header with comments
+			include("elements/header.php");
+			print("<body>\n");
+			print("<div style=\"position:absolute;top:0px;left:0px;\" align=\"center\">\n");
+			print("<a href=\"javascript:self.close();\">");
+			printf("<img src=\"%s\" width=\"356\" height=\"249\" border=\"0\" alt=\"%s\"></a>",$row["map_url"],$addr_output);
+			// print("<br />\n<a href=\"javascript:self.close();\">close window</a><br />\n");
+			print("</div>\n");
+			print("</body>\n");
+			print("</html>\n");
+		}
 	}
 ?>
