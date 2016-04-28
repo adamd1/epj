@@ -23,6 +23,20 @@ require_once __DIR__ . "/data/DBConnector.php";
    $p_code=$_REQUEST["p_code"];
    $p_notes=$_REQUEST["p_notes"];
    $p_cowork=trim($_REQUEST["p_cowork"]);
+   $debugout="<p>";
+   $debugout.="p_jobid = ".$_REQUEST["p_jobid"]."|".$p_jobid."<br />";
+   $debugout.="p_frmdate = ".$_REQUEST["p_frmdate"]."|".$p_frmdate."<br />";
+   $debugout.="p_todate = ".$_REQUEST["p_todate"]."|".$p_todate."<br />";
+   $debugout.="p_jobttl = ".$_REQUEST["p_jobttl"]."|".$p_jobttl."<br />";
+   $debugout.="p_comp = ".$_REQUEST["p_comp"]."|".$p_comp."<br />";
+   $debugout.="p_comptype = ".$_REQUEST["p_comptype"]."|".$p_comptype."<br />";
+   $debugout.="p_street = ".$_REQUEST["p_street"]."|".$p_street."<br />";
+   $debugout.="p_city = ".$_REQUEST["p_city"]."|".$p_city."<br />";
+   $debugout.="p_stprv = ".$_REQUEST["p_stprv"]."|".$p_stprv."<br />";
+   $debugout.="p_cntry = ".$_REQUEST["p_cntry"]."|".$p_cntry."<br />";
+   $debugout.="p_code = ".$_REQUEST["p_code"]."|".$p_code."<br />";
+   $debugout.="p_notes = ".$_REQUEST["p_notes"]."|".$p_notes."<br />";
+   $debugout.="p_cowork = ".$_REQUEST["p_cowork"]."|".$p_cowork."</p>";
    if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
