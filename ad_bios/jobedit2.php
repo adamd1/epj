@@ -23,8 +23,8 @@ require_once __DIR__ . "/data/DBConnector.php";
    $p_code=$_REQUEST["p_code"];
    $p_notes=$_REQUEST["p_notes"];
    $p_cowork=trim($_REQUEST["p_cowork"]);
-   $debugout="<p>";
-   $debugout.="p_jobid = ".$_REQUEST["p_jobid"]."|".$p_jobid."<br />";
+/*
+   $debugout="<p>p_jobid = ".$_REQUEST["p_jobid"]."|".$p_jobid."<br />";
    $debugout.="p_frmdate = ".$_REQUEST["p_frmdate"]."|".$p_frmdate."<br />";
    $debugout.="p_todate = ".$_REQUEST["p_todate"]."|".$p_todate."<br />";
    $debugout.="p_jobttl = ".$_REQUEST["p_jobttl"]."|".$p_jobttl."<br />";
@@ -38,6 +38,7 @@ require_once __DIR__ . "/data/DBConnector.php";
    $debugout.="p_notes = ".$_REQUEST["p_notes"]."|".$p_notes."<br />";
    $debugout.="p_cowork = ".$_REQUEST["p_cowork"]."|".$p_cowork."</p>";
    print($debugout);
+*/
    if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
@@ -75,8 +76,8 @@ require_once __DIR__ . "/data/DBConnector.php";
 			print($ex->getMessage());
 		}
 		if($success==1){
-			// header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
-			print("<a href=\"".$basepath."jobs.php?p_jobid=".$p_jobid."\">".$job_query."</a>");
+			header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
+			// print("<a href=\"".$basepath."jobs.php?p_jobid=".$p_jobid."\">".$job_query."</a>");
 		} else {
 			// Unsuccessful
 			print("Doofus: Empty fields!!");
