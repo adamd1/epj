@@ -60,6 +60,7 @@ require_once __DIR__ . "/data/DBConnector.php";
                   notes = '".$p_notes."',
                   co_workers = '".$p_cowork."'
                   WHERE (job_id = ".$p_jobid.");";
+print($job_query); exit;
 	// connect to the database
 	$db = dbconnector::connect();
 	$stmt="";
