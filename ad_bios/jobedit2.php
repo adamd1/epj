@@ -12,14 +12,17 @@ require_once __DIR__ . "/data/DBConnector.php";
    $css="bio.css";
    $p_jobid=$_REQUEST["p_jobid"];
    $p_frmdate=$_REQUEST["p_frmdate"];
+   $p_todate=$_REQUEST["p_tomdate"];
    $p_jobttl=$_REQUEST["p_jobttl"];
-   $p_comp=$_REQUEST["p_comp"];
-   $p_city=$_REQUEST["p_city"];
+   $p_comp=trim($_REQUEST["p_comp"]);
+   $p_comptype=trim($_REQUEST["p_comptype"]);
+   $p_street=trim($_REQUEST["p_street"]);
+   $p_city=trim($_REQUEST["p_city"]);
    $p_stprv=$_REQUEST["p_stprv"];
    $p_cntry=$_REQUEST["p_cntry"];
    $p_code=$_REQUEST["p_code"];
    $p_notes=$_REQUEST["p_notes"];
-   $p_cowork=$_REQUEST["p_cowork"];
+   $p_cowork=trim($_REQUEST["p_cowork"]);
    if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
@@ -56,13 +59,13 @@ require_once __DIR__ . "/data/DBConnector.php";
 			// $this->_log->logError(__METHOD__.': Exception '.$ex->getMessage());
 			print($ex->getMessage());
 		}
-			if($success==1){
-	      // header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
-	      print($job_query);
-	    } else {
-				// Unsuccessful
-	      print("Doofus: Empty fields!!");
-			}
+		if($success==1){
+			// header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
+			print($job_query);
+		} else {
+			// Unsuccessful
+			print("Doofus: Empty fields!!");
+		}
    } else {
 // Unsuccessful
       print("Doofus: All fields are required.");
