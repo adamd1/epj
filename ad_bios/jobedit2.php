@@ -37,6 +37,7 @@ require_once __DIR__ . "/data/DBConnector.php";
    $debugout.="p_code = ".$_REQUEST["p_code"]."|".$p_code."<br />";
    $debugout.="p_notes = ".$_REQUEST["p_notes"]."|".$p_notes."<br />";
    $debugout.="p_cowork = ".$_REQUEST["p_cowork"]."|".$p_cowork."</p>";
+   print($debugout);
    if ($p_jobid != '' && $p_jobid != null
        && $p_frmdate != '' && $p_frmdate != null
        && $p_jobttl != '' && $p_jobttl != null
