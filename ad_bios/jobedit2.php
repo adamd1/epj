@@ -57,10 +57,9 @@ require_once __DIR__ . "/data/DBConnector.php";
                   stprv = '".$p_stprv."',
                   country = '".$p_cntry."',
                   postcode = '".$p_code."',
-                  notes = '".$p_notes."',
-                  co_workers = '".$p_cowork."'
+                  notes = '".addslashes($p_notes)."',
+                  co_workers = '".addslashes($p_cowork)."'
                   WHERE (job_id = ".$p_jobid.");";
-print($job_query); exit;
 	// connect to the database
 	$db = dbconnector::connect();
 	$stmt="";
@@ -77,7 +76,7 @@ print($job_query); exit;
 		}
 		if($success==1){
 			// header("Location: ".$basepath."jobs.php?p_jobid=".$p_jobid."\n\n");
-			print($job_query);
+			print("<a href=\"".$basepath."jobs.php?p_jobid=".$p_jobid."\">".$job_query."</a>");
 		} else {
 			// Unsuccessful
 			print("Doofus: Empty fields!!");
