@@ -80,7 +80,7 @@ $db = dbconnector::connect();
            print("  <tr valign=\"top\">\n");
            print("   <td width=\"200\" align=\"left\" class=\"blurb\">\n");
 // Add new entry
-           printf("   &#149;&nbsp;<a href=\"bioadd1.php?p_yr=%s\">New Entry</a>\n",$bio_rows["bioyear"]);
+           printf("   &#149;&nbsp;<a href=\"bioadd1.php?p_yr=%s\">New Entry</a>\n",$bio_rows["bioyear"]); // Needs fixing. :/
            print("   </td>\n");
            print("   <td width=\"200\" align=\"left\">\n");
 // Form containing all available years.
