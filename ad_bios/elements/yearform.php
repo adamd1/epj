@@ -6,6 +6,7 @@
    (c) 2002 Adam Drake
    adam@brainrub.com
 */
+$pri="";
 if(isset($_REQUEST["$pri"])){
 	$pri=$_REQUEST["$pri"];
 }
