@@ -82,12 +82,12 @@ $term_count=count($terms);
 	      foreach($rows as $row) {
            // If there was only one word, just use the original search term
 	         if ($term_count==1){
-	            $output=preg_replace($p_term,"<b style=\"background-color:#990000;\">\\0</b>",$row["outblab"]);
+	            $output=preg_replace("/".$p_term."/","<b style=\"background-color:#990000;\">$1</b>",$row["outblab"]);
 	         } else {
 	 						// If there was more than one word, highlight each individual word
 	            $output=$row["outblab"];
 	            for($i=0;$i<$term_count;$i++){
-	               $output=preg_replace($terms[$i],"<b style=\"background-color:#990000;\">\\0</b>",$output);
+	               $output=preg_replace("/".$terms[$i]."/","<b style=\"background-color:#990000;\">$1</b>",$output);
 	            }
 	         }
 	         print("     <tr>\n");
