@@ -6,7 +6,9 @@
    (c) 2002 Adam Drake
    adam@brainrub.com
 */
-$pri=$_REQUEST["$pri"];
+if(isset($_REQUEST["$pri"])){
+	$pri=$_REQUEST["$pri"];
+}
 $yr_query="SELECT DISTINCT bioyear FROM my_bio ORDER BY bioyear DESC;";
 $stmt = $db->prepare($yr_query);
 // Execute
