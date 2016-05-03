@@ -6,7 +6,9 @@
    (c) 2002 Adam Drake
    adam@brainrub.com
 */
-$p_term=$_REQUEST["$p_term"];
+if(isset($_REQUEST["$p_term"])){
+	$p_term=$_REQUEST["$p_term"];
+}
    print("   <form action=\"biosearch.php\" method=\"post\">\n");
    print("   <input type=\"text\" name=\"p_term\" size=\"20\" ");
       if(isset($p_term)){
