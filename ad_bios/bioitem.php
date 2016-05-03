@@ -19,7 +19,7 @@ $p_term="";
 		$p_bio_id=$_REQUEST["p_bio_id"];
 	}
 	if(isset($_REQUEST["p_term"])){
-		$p_term=$_REQUEST["$p_term"];
+		$p_term=$_REQUEST["p_term"];
 	}
   if ($p_yr==""){
      $p_yr = $yearout;
