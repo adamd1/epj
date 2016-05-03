@@ -11,6 +11,7 @@
 require_once __DIR__ . "/data/DBConnector.php";
 $p_yr=$_REQUEST["p_yr"];
 $p_bio_id=$_REQUEST["p_bio_id"];
+$p_term=$_REQUEST["$p_term"];
   if ($p_yr==""){
      $p_yr = $yearout;
   }
@@ -107,12 +108,12 @@ $db = dbconnector::connect();
                         $term_count=count($terms);
 // If there was only one word, just use the original search term
                            if ($term_count==1){
-                              $output=eregi_replace($p_term,"<b style=\"background-color:#990000;\">\\0</b>",$row["blab"]);
+                              $output=preg_replace("/".$p_term."/","<b style=\"background-color:#990000;\">$1</b>",$row["blab"]);
                            } else {
 // If there was more than one word, highlight each individual word
                               $output=$row["blab"];
                               for($i=0;$i<$term_count;$i++){
-                                 $output=eregi_replace($terms[$i],"<b style=\"background-color:#990000;\">\\0</b>",$output);
+                                 $output=eregi_replace("/".$terms[$i]."/","<b style=\"background-color:#990000;\">$1</b>",$output);
                               }
                            }
                      } else {
