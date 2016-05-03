@@ -9,9 +9,18 @@
 // require_once __DIR__."/lib/KLogger.php";  // Include KLogger first so config sets log dir
 // Database connection object (Which auto-loads all the site configuration.)
 require_once __DIR__ . "/data/DBConnector.php";
-$p_yr=$_REQUEST["p_yr"];
-$p_bio_id=$_REQUEST["p_bio_id"];
-$p_term=$_REQUEST["$p_term"];
+$p_yr="";
+$p_bio_id="";
+$p_term="";
+	if(isset($_REQUEST["p_yr"])){
+		$p_yr=$_REQUEST["p_yr"];
+	}
+	if(isset($_REQUEST["p_bio_id"])){
+		$p_bio_id=$_REQUEST["p_bio_id"];
+	}
+	if(isset($_REQUEST["p_term"])){
+		$p_term=$_REQUEST["$p_term"];
+	}
   if ($p_yr==""){
      $p_yr = $yearout;
   }
