@@ -10,6 +10,7 @@
 // Database connection object (Which auto-loads all the site configuration.)
 require_once __DIR__ . "/data/DBConnector.php";
 $stmt="";
+$p_term="";
 $terms="";
 $term_count=0;
 $css="bio.css";
@@ -92,11 +93,10 @@ $term_count=count($terms);
 	         }
 	         print("     <tr>\n");
 	         print("      <td width=\"20\" align=\"center\" valign=\"top\">\n");
-	         printf("      <img src=\"/images/dot-red.gif\" width=\"6\" height=\"6\" border=\"0\">\n");
+	         print("      <img src=\"/images/dot-red.gif\" width=\"6\" height=\"6\" border=\"0\">\n");
 	         print("      </td>\n");
 	         print("      <td width=\"330\" align=\"left\" valign=\"top\">\n");
-	         printf("<a href=\"bioitem.php?p_bio_id=%s",$row["bio_id"]);
-	         printf("&p_term=%s\">",$p_term);
+	         printf("<a href=\"bioitem.php?p_bio_id=%s&p_term=%s\">",$row["bio_id"],$p_term);
            // printf("%s</a> ",$row["outdate"]);
 	         printf("%s</a> ",$row["bioyear"]);
 	         printf("(%s&#037;)<br />",NUMBER_FORMAT(($row["score"]*10),2,'.',','));
