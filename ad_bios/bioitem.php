@@ -68,7 +68,7 @@ $db = dbconnector::connect();
             print("<body>\n");
             print("<a href=\"index.php\">Back To The Bio Index</a><br /><br />\n\n");
             print("<div align=\"center\">\n\n");
-            $age = ($bio_rows["bioyear"]-$temp_brthyr);
+            $age = ($rows[0]["bioyear"]-$temp_brthyr);
                if ($age == 0){
                   $age = 'Birth';
                }
