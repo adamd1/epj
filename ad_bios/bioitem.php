@@ -76,8 +76,8 @@ $db = dbconnector::connect();
             print("  <tr>\n");
             print("   <td width=\"200\" align=\"left\">My Bio: ");
             print("<a href=\"bio.php");
-            printf("?p_yr=%s\">",$bio_rows["bioyear"]);
-            printf("%s</a></td>\n",$bio_rows["bioyear"]);
+            printf("?p_yr=%s\">",$rows[0]["bioyear"]);
+            printf("%s</a></td>\n",$rows[0]["bioyear"]);
             printf("   <td width=\"200\" align=\"right\">(%s)</span>\n",$age);
             print("   </td>\n");
             print("  </tr>\n");
@@ -89,7 +89,7 @@ $db = dbconnector::connect();
             include("elements/yearform.php");
 // Search form
             include("elements/searchform.php");
-            printf("   &#149;&nbsp;<a href=\"bioadd1.php?p_yr=%s\">New Entry</a>\n",$bio_rows["bioyear"]); // Needs fixing. :/
+            printf("   &#149;&nbsp;<a href=\"bioadd1.php?p_yr=%s\">New Entry</a>\n",$rows[0]["bioyear"]);
             print("   </td>\n");
             print("   <td width=\"440\" align=\"left\" valign=\"top\">\n");
             print("   <table border=\"0\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#333333\" class=\"blurb\">\n");
