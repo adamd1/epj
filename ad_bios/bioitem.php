@@ -10,8 +10,13 @@
 // Database connection object (Which auto-loads all the site configuration.)
 require_once __DIR__ . "/data/DBConnector.php";
 $p_yr=$_REQUEST["p_yr"];
+$p_bio_id=$_REQUEST["p_bio_id"];
   if ($p_yr==""){
      $p_yr = $yearout;
+  }
+// No blanks
+  if ($p_bio_id==""){
+     $p_bio_id = 1;
   }
 $css="bio.css";
 // connect to the database
@@ -35,6 +40,7 @@ $db = dbconnector::connect();
                $temp_brthyr = $row["birthyr"];
             }
          }
+
 // The search query
       $bio_query="SELECT ALL a.bio_id,a.section,a.bioyear,
                   a.date_entered,a.blab
