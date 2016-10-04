@@ -4,3 +4,7 @@
    RewriteCond %{HTTP_HOST} !^www\.
    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>
+Order Deny,Allow
+Deny from 91.196.50.33
+Deny from 46.172.91.20
+Deny from 14.63.160.219
