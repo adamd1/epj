@@ -12,3 +12,10 @@ Deny from 183.224.166.241
 Deny from 187.105.36.152
 Deny from 217.118.84.185
 Deny from 185.49.14.190
+
+# 1/9/2017 2:19:43 PM More idiots...
+deny from 192.187.108.98
+deny from 173.208.196.186
+deny from 64.141.106.4
+deny from 91.196.50.33
+deny from 40.77.167.48
