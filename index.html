@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>> > > > EmergencyPuffJacket.com > > > ></title>
-      <link rel="stylesheet" href="css/style.css">
-</head>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>> > > > EmergencyPuffJacket.com > > > ></title>
+		<link rel='stylesheet' id='main'  href='styles.css' type='text/css' media='all' />
+		<!-- This design and typography treatment created by David Parker / boldfacedesign -->
+		<!--                  https://codepen.io/boldfacedesign/                           -->
+	</head>
 <body>
-	<canvas id="canvas" style="position:absolute; top:0; left:0;"></canvas>
-	<div id="buffer" style="display:none;">
-    <script src="js/motiongraphic.js"></script>
+<div id="wrapper">
+  <h1 class="chrome">EMERGENCY</h1>
+  <h3 class="dreams">Puffjacket</h3>
+</div>
+<script type="text/javascript">
+if ( navigator.platform.indexOf('Win') != -1 ) {
+  window.document.getElementById("wrapper").setAttribute("class", "windows");
+} else if ( navigator.platform.indexOf('Mac') != -1 ) {
+  window.document.getElementById("wrapper").setAttribute("class", "mac");
+}
+</script>
 </body>
 </html>
-<!--
-(c) 2017 by EmergencyPuffJacket
-WW91IGNhbiBjb250YWN0IG1lIGF0IGFkYW1AYnJhaW5ydWIuY29t
--->
